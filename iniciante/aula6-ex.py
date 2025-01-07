@@ -2,7 +2,7 @@
 def verificar_inteiro(numero):
 
     try:
-        numero != int(numero)
+        numero = int(numero)
         return numero
 
     except ValueError:
@@ -18,6 +18,7 @@ def verificar_impar_par(valor):
         print('O número é ímpar!')
 
 def verificar_hora_valida(hora):
+    
     try:
         hora = int(hora)
         return hora
