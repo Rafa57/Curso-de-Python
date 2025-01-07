@@ -1,0 +1,1 @@
+nome = "Rafael Santos" # iterável
