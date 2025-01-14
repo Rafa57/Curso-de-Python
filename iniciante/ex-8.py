@@ -7,7 +7,6 @@ tentativas = 0
 
 while True:
     
-    
     entrada = input('Tente adivinhar a palavra secreta. Digite uma letra: ').lower()
     tentativas += 1
     
@@ -24,7 +23,7 @@ while True:
             palavra_formada += i
         else:
             palavra_formada += '_'
-    print('Palavra: ', palavra_formada)
+    print(f'Palavra: {palavra_formada}')
     
     if palavra_formada == palavra:
         os.system('cls')
