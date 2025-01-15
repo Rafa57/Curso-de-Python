@@ -20,7 +20,6 @@ def inserir():
             print('Opcao inválida')
             continue
 
-    
 def remover():
     while True:
         opcao = input('1.Remove\n2.Voltar\n\nEscolha uma opção: ')
