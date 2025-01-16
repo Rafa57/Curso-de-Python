@@ -7,7 +7,7 @@ soma = numero_1 + numero_2
 print(soma)
 print(f'{soma:.2f}')
 
-round()
+# round()
 print(round(soma, 2)) # ainda é um float
 
 # split e join com list e str
