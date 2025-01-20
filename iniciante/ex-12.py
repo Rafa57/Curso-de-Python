@@ -3,7 +3,7 @@ import re
 import sys
 import random
 
-for _ in range(100):
+for _ in range(20):
     entrada = ''
     for i in range(9):
         entrada += str(random.randint(0, 9))
@@ -23,12 +23,12 @@ for _ in range(100):
         sys.exit()
 
     # RESOLUÇÃO (PRIMEIRO DIGITO)-----------------------
-    nove_digitos = cpf[:9]
+    # cpf = cpf[:9]
 
     def multiplicar_cpf():
         multi = 10
         resultado = 0
-        for digito in nove_digitos:
+        for digito in cpf:
             resultado += int(digito) * multi
             multi -= 1
         
@@ -57,7 +57,7 @@ for _ in range(100):
     verificacao_digito = resto_2 if resto_2 <= 9 else 0
     # print(f'O digito 2 é: {verificacao_digito}')
 
-    cpf_calculado = f'{nove_digitos}{resto_1}{resto_2}'
+    cpf_calculado = f'{cpf}{resto_1}{resto_2}'
     print(cpf_calculado)
     verificacao_cpf = 'CPF válido' if cpf == cpf_calculado else 'CPF inválido'
     # print(verificacao_cpf)
