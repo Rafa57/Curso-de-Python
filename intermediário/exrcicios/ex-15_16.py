@@ -3,7 +3,7 @@
 questions = [
     {
         'Pergunta': 'Quanto é 12 + 24?',
-        'Opções': ['32', '38', '36', '40', '37'],
+        'Opções': ['32', '12', '36', '40', '42'],
         'Resposta': '36'
     },
     {
@@ -18,16 +18,38 @@ questions = [
     }
 ]
 
+def answer(question):
+    def quest(aswr):
+        options = questions[question].get('Opções')
+        correct = questions[question].get('Resposta')
 
-def answer(answer):
-    ...
+        if aswr not in options:
+           return 'Opção inválida.\n'
+        if aswr != correct:
+            return 'Resposta errada.\n'
+        else:
+            return 'Certa resposta.\n'
 
-quest_1 = questions[0].get('Pergunta')
-quest_2 = questions[1].get('Pergunta')
-quest_3 = questions[2].get('Pergunta')
+    return quest
 
-print(quest_3)
+def user_answer():
+    quest_1 = answer(0)
+    quest_2 = answer(1)
+    quest_3 = answer(2)
 
-# aswr_1 = input('Digite a resposta')
-# aswr_2 = input('Digite a resposta')
-# aswr_3 = input('Digite a resposta')
+    print(questions[0].get('Pergunta'))
+    for i in questions[0].get('Opções'):
+        print(i)
+    print(quest_1(input('Digite a resposta: ')))
+
+    print(questions[1].get('Pergunta'))
+    for i in questions[1].get('Opções'):
+        print(i)
+    print(quest_2(input('Digite a resposta: ')))
+
+    print(questions[2].get('Pergunta'))
+    for i in questions[2].get('Opções'):
+        print(i)
+    print(quest_3(input('Digite a resposta: ')))
+
+user_answer()

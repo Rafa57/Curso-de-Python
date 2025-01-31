@@ -41,7 +41,7 @@ lang = {
 #     print(f'{key}: {value}')
 
 # get
-print(lang.get('name')) # retorna o valor da chave (retorna None se não existir)
+print(lang.get('name')) # retorna o valor da chave (retorna None como padrão)
 
 print(lang.get('height', 'not found')) # o valor padrão pode ser mudado
 
