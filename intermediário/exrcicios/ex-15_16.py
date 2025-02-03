@@ -56,19 +56,38 @@ questions = [
 
 # RESOLUÇÃO
 
-for pergunta in questions:
-    print(pergunta['Pergunta'])
+qtd_acertos = 0
+qtd_erros = 0
 
-    for i, opcao in enumerate(pergunta['Opções']):
+for pergunta in questions:
+
+    print(pergunta['Pergunta'])
+    opcoes = pergunta['Opções']
+    
+    for i, opcao in enumerate(opcoes):
         # letra = chr(65 + i) # usa o código ASCII (A = 65)
         print(f'{i}) {opcao}')
         
-    resp_certa = pergunta['Resposta']
     resp_usuario = input('Resposta: ')
 
-    if int(resp_usuario) < 0 and int(resp_certa) > len(pergunta):
-        print('Opção inválida.\n')
-    elif resp_usuario != resp_certa:
-         print('Resposta errada.\n')
+    acertou = False
+    escolha_int = None
+    qtd_opcoes = len(opcoes)
+
+    if resp_usuario.isdigit():
+        escolha_int = int(resp_usuario)
+    
+    if escolha_int is not None:
+        if escolha_int >= 0 and escolha_int < qtd_opcoes:
+            if opcoes[escolha_int] == pergunta['Resposta']:
+                acertou = True
+
+    if acertou:
+        qtd_acertos += 1
+        print('Certa resposta!\n')
     else:
-        print('Resposta certa.\n')
+        qtd_erros += 1
+        print("Resposta errada!\n")
+
+print(f'Quantidade de acertos: {qtd_acertos}')
+print(f'Quantidade de erros: {qtd_erros}')
