@@ -7,7 +7,7 @@ REQUISITOS:
 
 bidimensional_list = [
     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    [19, 72, 32, 41, 32, 32, 32, 5, 34, 56],
+    [19, 5, 32, 41, 32, 32, 32, 5, 34, 56],
     [11, 32, 53, 48, 59, 60, 9, 9, 9, 102],
     [1, 2, 2, 4, 5, 8, 8, 8, 8, 15],
     [1, 2, 3, 7, 5, 7, 7, 8, 9, 10],
@@ -15,22 +15,18 @@ bidimensional_list = [
     [1, 2, 3, 2, 1, 2, 5, 2, 9, 10],
     [1, 2, 14, 4, 14, 2, 14, 8, 9, 102]
 ]
-
-def duplicados():
     
-
-def repetitions():
-    for i in bidimensional_list:
+def repetitions(num_list):
+    for i in num_list:
         checked = set()
 
         for value in i:
-
             if value not in checked:
-                counting = i.count(value)
+                i.count(value)
 
-                if counting > 1:
-                    print(f'Lista: {i}\nValor repetido: {value}\nRepetições: {counting}\n')
+            if value in checked:
+                print(f'Lista: {i}\nValor repetido: {value}\n')
+                break
 
             checked.add(value)
-
-repetitions()
+repetitions(bidimensional_list)
