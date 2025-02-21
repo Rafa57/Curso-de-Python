@@ -41,3 +41,19 @@ def reverse_bubble_sort(array):
 
 print(bubble_sort(bubble_list))
 print(reverse_bubble_sort(bubble_list))
+
+
+# NUMEROS PRIMOS EM INTERVALO
+
+def prime_number(num1, num2):
+    number_list = []
+
+    while num1 <= num2:
+        if num1 % 2 != 0 and num1 % 3 != 0 and num1 % 5 != 0:
+            number_list.append(num1)
+
+        num1 += 1
+
+    return number_list
+
+print(prime_number(10, 50))
