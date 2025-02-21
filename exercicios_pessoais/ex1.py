@@ -30,11 +30,11 @@ print(palindromo('prime'))
 # ORDENAÇÃO BUBBLE SORT
 
 bubble_list = [23, 34, 67, 22, 32, 1, 2, 43]
-bubble_list.sort(reverse=True) # sort modifica a lista
-print(bubble_list)
+# bubble_list.sort(reverse=True) # sort modifica a lista
+# print(bubble_list)
 
 def bubble_sort(array):
-    return sorted(array, reverse=True) # cria uma cópia rasa
+    return sorted(array) # cria uma cópia rasa
 
 def reverse_bubble_sort(array):
     return sorted(array, reverse=True)
