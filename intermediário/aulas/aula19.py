@@ -68,10 +68,10 @@ for x in range(3):
 
 lst_1 = [
     (x, y) 
-    for x in range(3) 
-    for y in range(3)
+    for x in range(1, 4) 
+    for y in range(1, 4)
 ]
-pp(lst_1)
+pp(*lst_1)
 
 lst_1 = [
     [item for item in 'Rafael']
