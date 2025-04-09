@@ -1,15 +1,15 @@
 # SEQUENCIA DE FIBONACCI
-def fibonnaci(num):
-    if num <= 0:
-        return 'numero invalido'
-    elif num == 1:
-        return 0
-    elif num == 2:
-        return 1
-    else:
-        return fibonnaci(num - 1) + fibonnaci(num - 2)
+def fibonacci(num):
+    lista_fibo = []
+    f1, f2 = 0, 1
 
-print(fibonnaci(10))
+    for _ in range(num):
+        lista_fibo.append(f1)
+        f1, f2 = f2, f1 + f2
+        
+    return lista_fibo
+
+print(*fibonacci(10))
 
 
 # PALÍNDROMO
