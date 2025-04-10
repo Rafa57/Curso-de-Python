@@ -1,4 +1,5 @@
 # SEQUENCIA DE FIBONACCI
+
 def fibonacci(num):
     lista_fibo = []
     f1, f2 = 0, 1
@@ -11,8 +12,23 @@ def fibonacci(num):
 
 print(*fibonacci(10))
 
+# def fibonacci(num):
+#     lista_fibo = []
+#     f1 = 0
+#     f2 = 1
+
+#     for _ in range(num):
+#         lista_fibo.append(f1)
+#         f1 = f2
+#         f2 = f1 + f2
+        
+#     return lista_fibo
+
+# print(*fibonacci(10))
+# -----------------------------------------------
 
 # PALÍNDROMO
+
 def palindrome(text):
     text = str(text).lower()
     final_txt = text[::-1]
@@ -24,23 +40,25 @@ def palindrome(text):
 
 print(palindrome('tenet'))
 print(palindrome('prime'))
-
+# -------------------------------------------
 
 # ORDENAÇÃO BUBBLE SORT
+
 bubble_list = [23, 34, 67, 22, 32, 1, 2, 43]
 # bubble_list.sort(reverse=True) # sort modifica a lista
 
-def bubble_sort(array):
-    return sorted(array) # cria uma cópia rasa
+def bubble_sort(lst) -> list:
+    return sorted(lst) # cria uma cópia rasa
 
-def reverse_bubble_sort(array):
-    return sorted(array, reverse=True)
+def reverse_bubble_sort(lst):
+    return sorted(lst, reverse=True)
 
 print(bubble_sort(bubble_list))
 print(reverse_bubble_sort(bubble_list))
-
+# ------------------------------------------------
 
 # NUMEROS PRIMOS EM INTERVALO
+
 def prime_verify(num):
     if num < 2:
         return False
@@ -51,11 +69,11 @@ def prime_verify(num):
 
     return True
 
-def prime_number(n1, n2):
+def prime_number(n1, n2) -> list:
     return [n for n in range(n1, n2 + 1) if prime_verify(n)]
 
 print(prime_number(10, 50))
-
+# -------------------------------------------------
 
 # CONTAGEM DE CARACTERES
 def char_count(iter):
@@ -70,4 +88,4 @@ def char_count(iter):
 
     return dictio
 
-print(char_count('hight'))
+print(char_count('banana'))

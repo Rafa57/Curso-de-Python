@@ -75,6 +75,6 @@ pp(*lst_1)
 
 lst_1 = [
     [item for item in 'Rafael']
-    for x in range(3)
+    for _ in range(3)
 ]
 pp(lst_1)
