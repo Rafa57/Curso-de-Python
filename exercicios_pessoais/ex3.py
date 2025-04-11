@@ -1,4 +1,5 @@
 import random
+import unicodedata
 
 # numero par
 def num_par(num):
@@ -68,3 +69,27 @@ def validation(cpf):
     if len(cpf) != 11 or not cpf.isdigit():
         return f'CPF({cpf}) é inválido!'
     return f'CPF({cpf}) é válido!'
+
+# Verificar palíndromo com frase completa
+frase = "Socorram-me subi no ônibus em Marrocos"
+
+def clean_phrase(frase):
+    frase_final = ""
+    retirar_acentos = "".join(c for c in unicodedata.normalize('NFD', frase)
+                              if unicodedata.category(c) != 'Mn')
+    
+    for i in retirar_acentos.lower():
+        if i.isalpha():
+            frase_final += i
+
+    return frase_final
+
+def verify_palindrome(palindromo):
+    if palindromo == palindromo[::-1]:
+        return f'A frase "{frase}" é um palíndromo'
+    else:
+        return f'A frase: {frase} não é um palíndromo.'
+
+print(verify_palindrome(clean_phrase(frase)))
+
+# resolução
