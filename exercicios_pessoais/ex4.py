@@ -34,3 +34,14 @@ print(remove_dupli('abacate'))
 print(remove_dupli('banana'))
 # ---------------------------------------------------
 
+# Agrupar palavras por tamanho
+
+def group_words(words):
+    word_dic = {}
+    key = ''
+    for i in words:
+            ...
+    
+    return word_dic
+
+print(group_words(["sol", "lua", "estrela", "céu", "mar", "universo"]))
