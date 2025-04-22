@@ -29,3 +29,24 @@ def verificar_dupli(palavra):
     return frase_final
 
 print(verificar_dupli(palavra_duplicada))
+# ------------------------------------------------------
+
+# 3. converter lista de tuplas em dicionário
+tuple_list = [('a', 1), ('b', 2), ('a', 3), ('b', 4), ('c', 5)]
+
+def convert_to_list(var):
+    dictio = {}
+
+    for key, value in var:
+        if key not in dictio:
+            dictio[key] = [value]
+        else:
+            dictio[key].append(value)
+
+    return dictio
+
+print(convert_to_list(tuple_list))
+# ------------------------------------------------------
+
+# 4. palavras em ordem alfabética invertida por tamanho
+
