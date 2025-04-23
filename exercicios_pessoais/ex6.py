@@ -50,3 +50,9 @@ print(convert_to_list(tuple_list))
 
 # 4. palavras em ordem alfabética invertida por tamanho
 
+
+def ordenar_palavras(palavras):
+    return sorted(palavras, key=lambda x: (-len(x), x[::-1]))
+
+lista = ['maçã', 'banana', 'uva', 'abacaxi', 'pera']
+print(ordenar_palavras(lista))
