@@ -56,3 +56,16 @@ def ordenar_palavras(palavras):
 
 lista = ['maçã', 'banana', 'uva', 'abacaxi', 'pera']
 print(ordenar_palavras(lista))
+# -------------------------------------------------------------
+
+# Teste de manipulação de arquivos externos
+lista2 = {n: n + 1 for n in range(5)}
+print(lista2)
+
+open('teste.txt', 'w').write('lista')
+
+with open('teste.txt', 'w') as salvar:
+    lista_salva = []
+    for item in lista2:
+        if item not in lista_salva:
+            salvar.write('%s\n' %item)
