@@ -20,7 +20,7 @@ con.commit()
 def insert_doador():
     nome = input("Digite seu nome: ")
     idade = input('Digite a sua idade: ')
-    valor = input("Digite o valor: ")
+    valor = input("Digite o valor: ").replace(',', '.')
 
     cursor.execute("INSERT INTO doadores (nome, idade, valor) VALUES (?, ?, ?)", (nome, idade, valor))
     con.commit()
@@ -81,7 +81,7 @@ def del_doador():
     else:
         print("ID não encontrado")
 
-
+# RESET DO BANCO DE DADOS
 def reset_tabela():
     confirmacao = input("Quer resetar a tabela? [S] ou [N]: ")
 
@@ -107,14 +107,14 @@ def reset_tabela():
     else:
         print("Digite somente uma das opções: [S] ou [N]")
 
-
+# MENU
 show_table()
 
 # insert_doador()
 
 # show_table()
 
-update_doador()
+# update_doador()
 
 # del_doador()
 

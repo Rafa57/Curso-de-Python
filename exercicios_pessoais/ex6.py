@@ -66,6 +66,8 @@ open('teste.txt', 'w').write('lista')
 
 with open('teste.txt', 'w') as salvar:
     lista_salva = []
-    for item in lista2:
-        if item not in lista_salva:
-            salvar.write('%s\n' %item)
+    
+    for key, value in lista2.items():
+        if key not in lista_salva:
+            salvar.write('%s: ' %key)
+            salvar.write('%d\n' %value)
