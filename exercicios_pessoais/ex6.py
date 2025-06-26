@@ -70,4 +70,4 @@ with open('teste.txt', 'w') as salvar:
     for key, value in lista2.items():
         if key not in lista_salva:
             salvar.write('%s: ' %key)
-            salvar.write('%d\n' %value)
+            salvar.write('%d\n' %value)  
