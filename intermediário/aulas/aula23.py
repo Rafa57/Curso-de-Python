@@ -17,9 +17,22 @@
 # from sys import *
 
 #  MODULARIZAÇÃO
-import aula23_m
-import sys
+# import aula23_m
+# import sys
 
-print('Este modulo se chama', aula23_m.nome)
-print('Este modulo se chama', __name__)
+# print('Este modulo se chama', aula23_m.nome)
+# print('Este modulo se chama', __name__)
+
+# lista = ['Rafael', 'Lais', 'João']
+# print(aula23_m.mostrar_lista(lista))
+# --------------------------------------------------
+
+# RECARREGANDO MODULOS, SINGLETON E IMPORTLIB
+import importlib
+import aula23_m
+
+for i in range(12):
+    import aula23_m  # os modulos no python são singleton (só podem ter uma instancia)
+    importlib.reload(aula23_m)
+# --------------------------------------------------
 
