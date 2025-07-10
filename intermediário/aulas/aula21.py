@@ -23,7 +23,7 @@ for i in generator:
     print(i)
 # ----------------------------------------------
 
-# Introdução às Gererator functions em Python
+# Introdução às Generator functions em Python
 # generator = (n for n in range(12))
 
 def generator(n=0, max=12):
