@@ -7,7 +7,7 @@ try:
     print('linha 1')
     print(p['a']) # TypeError
     print(lista1[15]) # IndexError
-    print(lista2[6]) # NameError
+    # print(lista2[6]) # NameError
     print('linha 2')
     
 except TypeError as e:
