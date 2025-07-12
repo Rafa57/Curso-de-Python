@@ -1,5 +1,5 @@
 # LIST COMPREHENSION EM PYTHON
-# List comprehension é uma forma rápida para criar listas a partir de iteráveis.
+# List comprehension é uma forma rápida de criar listas a partir de iteráveis.
 import pprint
 
 print('list(): ', list(range(12)))
